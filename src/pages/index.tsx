@@ -1,4 +1,5 @@
 import AnimatedText from "@/components/AnimatedTitle";
+import HireMe from "@/components/HireMe";
 import { LinkArrowIcon } from "@/components/Icons";
 import Layout from "@/components/Layout";
 import Image from "next/image";
@@ -49,6 +50,7 @@ export default function Home() {
           </div>
         </div>
       </Layout>
+      <HireMe />
     </main>
   );
 }
