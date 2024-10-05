@@ -19,6 +19,9 @@ const config: Config = {
       fontFamily: {
         mont: ["var(--font-mont)"],
       },
+      animation: {
+        "spin-slow": "spin 12s linear infinite",
+      },
     },
   },
   plugins: [],
