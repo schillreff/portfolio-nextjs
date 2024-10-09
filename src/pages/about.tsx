@@ -1,6 +1,7 @@
 import AnimatedTitle from "@/components/AnimatedTitle";
 import { SchillreffImage } from "@/components/Images";
 import Layout from "@/components/Layout";
+import Skills from "@/components/Skills";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 import Head from "next/head";
 import { useEffect, useRef } from "react";
@@ -101,6 +102,7 @@ export default function About() {
               </div>
             </div>
           </div>
+          <Skills />
         </Layout>
       </main>
     </>
