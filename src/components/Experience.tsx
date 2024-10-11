@@ -1,5 +1,6 @@
 import { motion, useScroll } from "framer-motion";
 import { useRef } from "react";
+import LiIcon from "./LiIcon";
 
 interface IDetaisl {
   position: string;
@@ -18,12 +19,19 @@ const Details = ({
   address,
   work,
 }: IDetaisl) => {
+  const ref = useRef<HTMLLIElement>(null);
   return (
     <li
+      ref={ref}
       className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col 
     items-center justify-between"
     >
-      <div>
+      <LiIcon reference={ref} />
+      <motion.div
+        initial={{ y: 50 }}
+        whileInView={{ y: 50 }}
+        transition={{ duration: 0.5, type: "spring" }}
+      >
         <h3 className="capitalize font-bold text-2xl">
           {position}&nbsp;
           <a
@@ -38,7 +46,7 @@ const Details = ({
           {time} | {address}
         </span>
         <p className="font-medium w-full text-justify">{work}</p>
-      </div>
+      </motion.div>
     </li>
   );
 };
@@ -58,7 +66,7 @@ const Experience = () => {
       <div ref={ref} className="w-[75%] mx-auto relative">
         <motion.div
           style={{ scaleY: scrollYProgress }}
-          className="absolute left-8 top-0 w-[4px] h-full bg-dark origin-top"
+          className="absolute left-9 top-1 w-[4px] h-full bg-dark origin-top"
         />
         <ul className="w-full flex flex-col items-start justify-between ml-4">
           <Details
