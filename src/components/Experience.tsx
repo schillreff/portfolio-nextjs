@@ -29,7 +29,7 @@ const Details = ({
       <LiIcon reference={ref} />
       <motion.div
         initial={{ y: 50 }}
-        whileInView={{ y: 50 }}
+        whileInView={{ y: 0 }}
         transition={{ duration: 0.5, type: "spring" }}
       >
         <h3 className="capitalize font-bold text-2xl">
@@ -80,24 +80,13 @@ const Experience = () => {
             Python."
           />
           <Details
-            position="Front-End Developer"
-            company="Kenzie"
-            companyLink="https://www.kenzie.com.br/"
-            time="2022-2023"
-            address="São José dos Pinhais, PR"
+            position="Logic Instructor of Programming"
+            company="UFRR"
+            companyLink="https://ufrr.br/"
+            time="2020-2021"
+            address="Boa Vista, RR"
             work="Guidance and assistance for students in the programming area in 
-            activities relating to programming logic, CSS, HTML, React, NodeJS, 
-            Python."
-          />
-          <Details
-            position="Front-End Developer"
-            company="Kenzie"
-            companyLink="https://www.kenzie.com.br/"
-            time="2022-2023"
-            address="São José dos Pinhais, PR"
-            work="Guidance and assistance for students in the programming area in 
-            activities relating to programming logic, CSS, HTML, React, NodeJS, 
-            Python."
+            activities relating to programming logic, Python."
           />
         </ul>
       </div>
