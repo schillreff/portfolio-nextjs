@@ -1,4 +1,5 @@
 import AnimatedTitle from "@/components/AnimatedTitle";
+import Education from "@/components/Education";
 import Experience from "@/components/Experience";
 import { SchillreffImage } from "@/components/Images";
 import Layout from "@/components/Layout";
@@ -105,6 +106,7 @@ export default function About() {
           </div>
           <Skills />
           <Experience />
+          <Education />
         </Layout>
       </main>
     </>
