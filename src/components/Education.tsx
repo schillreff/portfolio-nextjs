@@ -3,22 +3,13 @@ import { useRef } from "react";
 import LiIcon from "./LiIcon";
 
 interface IDetaisl {
-  position: string;
-  company: string;
-  companyLink: string;
+  type: string;
   time: string;
-  address: string;
-  work: string;
+  place: string;
+  info: string;
 }
 
-const Details = ({
-  position,
-  company,
-  companyLink,
-  time,
-  address,
-  work,
-}: IDetaisl) => {
+const Details = ({ type, time, place, info }: IDetaisl) => {
   const ref = useRef<HTMLLIElement>(null);
   return (
     <li
@@ -32,20 +23,11 @@ const Details = ({
         whileInView={{ y: 0 }}
         transition={{ duration: 0.5, type: "spring" }}
       >
-        <h3 className="capitalize font-bold text-2xl">
-          {position}&nbsp;
-          <a
-            href={companyLink}
-            target="_blank"
-            className="text-primary capitalize"
-          >
-            @{company}
-          </a>
-        </h3>
+        <h3 className="capitalize font-bold text-2xl">{type}</h3>
         <span className="capitalize font-medium text-dark/75">
-          {time} | {address}
+          {time} | {place}
         </span>
-        <p className="font-medium w-full text-justify">{work}</p>
+        <p className="font-medium w-full text-justify">{info}</p>
       </motion.div>
     </li>
   );
@@ -67,7 +49,7 @@ const Education = () => {
           className="absolute left-9 top-1 w-[4px] h-full bg-dark origin-top"
         />
         <ul className="w-full flex flex-col items-start justify-between ml-4">
-          <Details
+          {/* <Details
             position="Front-End Developer"
             company="Kenzie"
             companyLink="https://www.kenzie.com.br/"
@@ -96,7 +78,7 @@ const Education = () => {
             work="Guidance and assistance for students in the programming area in 
             activities relating to programming logic, CSS, HTML, React, NodeJS, 
             Python."
-          />
+          /> */}
         </ul>
       </div>
     </div>
