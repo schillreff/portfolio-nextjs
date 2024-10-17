@@ -1,6 +1,7 @@
 import AnimatedTitle from "@/components/AnimatedTitle";
 import Layout from "@/components/Layout";
 import Head from "next/head";
+import Link from "next/link";
 
 interface IFeaturedProject {
   type: string;
@@ -19,7 +20,11 @@ const FeaturedProject = ({
   link,
   github,
 }: IFeaturedProject) => {
-  return <div></div>;
+  return (
+    <article>
+      <Link href={link} target="_blank"></Link>
+    </article>
+  );
 };
 
 export default function Projects() {
