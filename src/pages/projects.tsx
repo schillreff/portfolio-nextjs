@@ -1,6 +1,8 @@
 import AnimatedTitle from "@/components/AnimatedTitle";
 import Layout from "@/components/Layout";
+import { image } from "framer-motion/client";
 import Head from "next/head";
+import Image from "next/image";
 import Link from "next/link";
 
 interface IFeaturedProject {
@@ -22,7 +24,9 @@ const FeaturedProject = ({
 }: IFeaturedProject) => {
   return (
     <article>
-      <Link href={link} target="_blank"></Link>
+      <Link href={link} target="_blank">
+        <Image src={img} alt={title} className="w-full h-auto" />
+      </Link>
     </article>
   );
 };
