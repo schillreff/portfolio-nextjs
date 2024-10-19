@@ -1,15 +1,16 @@
 import AnimatedTitle from "@/components/AnimatedTitle";
+import { GithubIcon } from "@/components/Icons";
 import Layout from "@/components/Layout";
-import { image } from "framer-motion/client";
 import Head from "next/head";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
+import VehicleCommerceImage from "./../../public/images/projects/vehicles-commerce.png";
 
 interface IFeaturedProject {
   type: string;
   title: string;
   summary: string;
-  img: string;
+  img: StaticImageData;
   link: string;
   github: string;
 }
@@ -23,10 +24,28 @@ const FeaturedProject = ({
   github,
 }: IFeaturedProject) => {
   return (
-    <article>
+    <article
+      className="w-full flex items-center justify-between rounded-3xl 
+    border border-solid border-dark bg-light shadow-2xl"
+    >
       <Link href={link} target="_blank">
-        <Image src={img} alt={title} className="w-full h-auto" />
+        <Image src={img} alt={title} className="w-full h-auto rounded-3xl" />
       </Link>
+      <div>
+        <span>{type}</span>
+        <Link href={link} target="_blank">
+          <h2>{title}</h2>
+        </Link>
+        <p>{summary}</p>
+        <div>
+          <Link href={github} target="_blank">
+            <GithubIcon />
+          </Link>
+          <Link href={link} target="_blank">
+            Visit Project
+          </Link>
+        </div>
+      </div>
     </article>
   );
 };
@@ -41,7 +60,16 @@ export default function Projects() {
         <Layout className="pt-16">
           <AnimatedTitle text="Imagination Trumps Knowledge!" />
           <div className="grid grid-cols-12 gap-24">
-            <div className="col-span-12">Featured Project</div>
+            <div className="col-span-12">
+              <FeaturedProject
+                type="Featured Project"
+                title="Vehicles Commerce"
+                summary="A website for buying and selling vehicles, it is also possible to follow the vehicle auction."
+                link="https://github.com/schillreff/vehicles-commerce-front.git"
+                github="https://github.com/schillreff/vehicles-commerce-front.git"
+                img={VehicleCommerceImage}
+              />
+            </div>
             <div className="col-span-6">Project-1</div>
             <div className="col-span-6">Project-2</div>
           </div>
