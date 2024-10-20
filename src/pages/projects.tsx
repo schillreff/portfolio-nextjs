@@ -28,11 +28,19 @@ const FeaturedProject = ({
       className="w-full flex items-center justify-between rounded-3xl 
     border border-solid border-dark bg-light shadow-2xl"
     >
-      <Link href={link} target="_blank">
-        <Image src={img} alt={title} className="w-full h-auto rounded-3xl" />
+      <Link
+        href={link}
+        target="_blank"
+        className="w-1/2 cursor-pointer overflow-hidden rounded-lg p-6"
+      >
+        <Image
+          src={img}
+          alt={title}
+          className="w-full h-auto border border-solid border-dark rounded-3xl"
+        />
       </Link>
-      <div>
-        <span>{type}</span>
+      <div className="w-1/2 flex flex-col items-start justify-between pl-6">
+        <span className="text-primary font-medium text-xl">{type}</span>
         <Link href={link} target="_blank">
           <h2>{title}</h2>
         </Link>
@@ -56,7 +64,10 @@ export default function Projects() {
       <Head>
         <title>Schillreff | Projects Page</title>
       </Head>
-      <main className="container mx-auto px-4 sm:px-6 lg:px-8 mb-16 flex flex-col items-center justify-center">
+      <main
+        className="container mx-auto px-4 sm:px-6 lg:px-8 mb-16 flex 
+      flex-col items-center justify-center"
+      >
         <Layout className="pt-16">
           <AnimatedTitle text="Imagination Trumps Knowledge!" />
           <div className="grid grid-cols-12 gap-24">
@@ -64,7 +75,8 @@ export default function Projects() {
               <FeaturedProject
                 type="Featured Project"
                 title="Vehicles Commerce"
-                summary="A website for buying and selling vehicles, it is also possible to follow the vehicle auction."
+                summary="A website developed using React for buying and selling 
+                vehicles, it is also possible to follow the vehicle auction."
                 link="https://github.com/schillreff/vehicles-commerce-front.git"
                 github="https://github.com/schillreff/vehicles-commerce-front.git"
                 img={VehicleCommerceImage}
