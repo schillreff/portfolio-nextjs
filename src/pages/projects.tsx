@@ -26,7 +26,7 @@ const FeaturedProject = ({
   return (
     <article
       className="w-full flex items-center justify-between rounded-3xl 
-    border border-solid border-dark bg-light shadow-2xl"
+    border border-solid border-dark bg-light shadow-2xl p-6"
     >
       <Link
         href={link}
@@ -36,20 +36,29 @@ const FeaturedProject = ({
         <Image
           src={img}
           alt={title}
-          className="w-full h-auto border border-solid border-dark rounded-3xl"
+          className="w-full h-auto border border-solid border-dark rounded-xl"
         />
       </Link>
-      <div className="w-1/2 flex flex-col items-start justify-between pl-6">
+      <div className="w-1/2 flex flex-col items-start justify-between pl-6 gap-1">
         <span className="text-primary font-medium text-xl">{type}</span>
-        <Link href={link} target="_blank">
-          <h2>{title}</h2>
+        <Link
+          href={link}
+          target="_blank"
+          className="hover:underline underline-offset-2"
+        >
+          <h2 className="my-2  w-full text-left text-4xl font-bold">{title}</h2>
         </Link>
-        <p>{summary}</p>
-        <div>
+        <p className="my-2 font-medium text-dark text-justify">{summary}</p>
+        <div className="mt-2 flex items-center">
           <Link href={github} target="_blank">
-            <GithubIcon />
+            <GithubIcon className="w-[48px] h-[48px]" />
           </Link>
-          <Link href={link} target="_blank">
+          <Link
+            href={link}
+            target="_blank"
+            className="ml-6 rounded-lg bg-dark text-light py-2 px-6 text-lg 
+            font-semibold"
+          >
             Visit Project
           </Link>
         </div>
@@ -75,8 +84,9 @@ export default function Projects() {
               <FeaturedProject
                 type="Featured Project"
                 title="Vehicles Commerce"
-                summary="A website developed using React for buying and selling 
-                vehicles, it is also possible to follow the vehicle auction."
+                summary="A simple website for buying and selling vehicles, 
+                it is also possible to follow auctions and place bids. Developed
+                 using React, Styled Components and Context API."
                 link="https://github.com/schillreff/vehicles-commerce-front.git"
                 github="https://github.com/schillreff/vehicles-commerce-front.git"
                 img={VehicleCommerceImage}
