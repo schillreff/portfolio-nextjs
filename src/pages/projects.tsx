@@ -25,9 +25,13 @@ const FeaturedProject = ({
 }: IFeaturedProject) => {
   return (
     <article
-      className="w-full flex items-center justify-between rounded-3xl 
-    border border-solid border-dark bg-light shadow-2xl p-6"
+      className="w-full flex items-center justify-between relative rounded-br-2xl
+       rounded-3xl border border-solid border-dark bg-light shadow-2xl p-8"
     >
+      <div
+        className="absolute top-0 -right-3 -z-10 w-[calc(100%+12px)] 
+      h-[calc(100%+14px)] rounded-br-3xl rounded-[2.5rem] bg-dark"
+      />
       <Link
         href={link}
         target="_blank"
@@ -51,7 +55,7 @@ const FeaturedProject = ({
         <p className="my-2 font-medium text-dark text-justify">{summary}</p>
         <div className="mt-2 flex items-center">
           <Link href={github} target="_blank">
-            <GithubIcon className="w-[48px] h-[48px]" />
+            <GithubIcon className="w-[54px] h-[54px]" />
           </Link>
           <Link
             href={link}
@@ -60,6 +64,61 @@ const FeaturedProject = ({
             font-semibold"
           >
             Visit Project
+          </Link>
+        </div>
+      </div>
+    </article>
+  );
+};
+
+interface IProject {
+  type: string;
+  title: string;
+  img: StaticImageData;
+  link: string;
+  github: string;
+}
+
+const Project = ({ type, title, img, link, github }: IProject) => {
+  return (
+    <article
+      className="w-full flex flex-col items-center justify-center rounded-2xl border 
+    border-solid border-dark bg-light p-6 relative"
+    >
+      <div
+        className="absolute top-0 -right-3 -z-10 w-[calc(100%+12px)] 
+      h-[calc(100%+14px)] rounded-br-3xl rounded-[2rem] bg-dark"
+      />
+      <Link
+        href={link}
+        target="_blank"
+        className="w-full cursor-pointer overflow-hidden rounded-lg"
+      >
+        <Image
+          src={img}
+          alt={title}
+          className="w-full h-auto border border-solid border-dark rounded-xl"
+        />
+      </Link>
+      <div className="w-full flex flex-col items-start justify-between mt-4">
+        <span className="text-primary font-medium text-xl">{type}</span>
+        <Link
+          href={link}
+          target="_blank"
+          className="hover:underline underline-offset-2"
+        >
+          <h2 className="my-2  w-full text-left text-3xl font-bold">{title}</h2>
+        </Link>
+        <div className="w-full mt-2 flex items-center justify-between">
+          <Link
+            href={link}
+            target="_blank"
+            className="text-lg font-semibold underline"
+          >
+            Visit
+          </Link>
+          <Link href={github} target="_blank">
+            <GithubIcon className="w-[40px] h-[40px]" />
           </Link>
         </div>
       </div>
@@ -78,8 +137,11 @@ export default function Projects() {
       flex-col items-center justify-center"
       >
         <Layout className="pt-16">
-          <AnimatedTitle text="Imagination Trumps Knowledge!" />
-          <div className="grid grid-cols-12 gap-24">
+          <AnimatedTitle
+            text="Imagination Trumps Knowledge!"
+            className="mb-16"
+          />
+          <div className="grid grid-cols-12 gap-24 gap-y-32">
             <div className="col-span-12">
               <FeaturedProject
                 type="Featured Project"
@@ -92,8 +154,24 @@ export default function Projects() {
                 img={VehicleCommerceImage}
               />
             </div>
-            <div className="col-span-6">Project-1</div>
-            <div className="col-span-6">Project-2</div>
+            <div className="col-span-6">
+              <Project
+                type="Featured Project"
+                title="Vehicles Commerce"
+                link="https://github.com/schillreff/vehicles-commerce-front.git"
+                github="https://github.com/schillreff/vehicles-commerce-front.git"
+                img={VehicleCommerceImage}
+              />
+            </div>
+            <div className="col-span-6">
+              <Project
+                type="Featured Project"
+                title="Vehicles Commerce"
+                link="https://github.com/schillreff/vehicles-commerce-front.git"
+                github="https://github.com/schillreff/vehicles-commerce-front.git"
+                img={VehicleCommerceImage}
+              />
+            </div>
           </div>
         </Layout>
       </main>
