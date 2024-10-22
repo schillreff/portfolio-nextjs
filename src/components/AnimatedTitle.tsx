@@ -39,7 +39,7 @@ const AnimatedTitle = ({ text, className = "" }: IAnimatedTitleProps) => {
     text-center overflow-hidden"
     >
       <motion.h1
-        className={`inline-block w-full text-dark font-bold capitalize text-8xl ${className}`}
+        className={`inline-block w-full text-dark dark:text-light font-bold capitalize text-8xl ${className}`}
         variants={variantsTitle}
         initial="initial"
         animate="animate"

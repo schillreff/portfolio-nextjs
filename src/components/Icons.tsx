@@ -19,7 +19,7 @@ export const GithubIcon = ({ className = "", ...rest }: IIconProps) => (
       style={{
         stroke: "none",
         fillRule: "nonzero",
-        fill: "#000",
+        fill: "currentColor",
         fillOpacity: 1,
       }}
     />
@@ -40,7 +40,7 @@ export const XIcon = ({ className = "", ...rest }: IIconProps) => (
       style={{
         stroke: "none",
         fillRule: "nonzero",
-        fill: "#000",
+        fill: "currentColor",
         fillOpacity: 1,
       }}
     />
@@ -99,7 +99,7 @@ export const CircularText = ({ className = "", ...rest }: IIconProps) => (
           strokeDashoffset: 0,
           strokeLinejoin: "miter",
           strokeMiterlimit: 4,
-          fill: "#000",
+          fill: "currentColor",
           fillRule: "nonzero",
           opacity: 1,
         }}
@@ -116,7 +116,7 @@ export const CircularText = ({ className = "", ...rest }: IIconProps) => (
           strokeDashoffset: 0,
           strokeLinejoin: "miter",
           strokeMiterlimit: 4,
-          fill: "#000",
+          fill: "currentColor",
           fillRule: "nonzero",
           opacity: 1,
         }}
@@ -133,7 +133,7 @@ export const CircularText = ({ className = "", ...rest }: IIconProps) => (
           strokeDashoffset: 0,
           strokeLinejoin: "miter",
           strokeMiterlimit: 4,
-          fill: "#000",
+          fill: "currentColor",
           fillRule: "nonzero",
           opacity: 1,
         }}
@@ -150,7 +150,7 @@ export const CircularText = ({ className = "", ...rest }: IIconProps) => (
           strokeDashoffset: 0,
           strokeLinejoin: "miter",
           strokeMiterlimit: 4,
-          fill: "#000",
+          fill: "currentColor",
           fillRule: "nonzero",
           opacity: 1,
         }}
@@ -167,7 +167,7 @@ export const CircularText = ({ className = "", ...rest }: IIconProps) => (
           strokeDashoffset: 0,
           strokeLinejoin: "miter",
           strokeMiterlimit: 4,
-          fill: "#000",
+          fill: "currentColor",
           fillRule: "nonzero",
           opacity: 1,
         }}
@@ -184,7 +184,7 @@ export const CircularText = ({ className = "", ...rest }: IIconProps) => (
           strokeDashoffset: 0,
           strokeLinejoin: "miter",
           strokeMiterlimit: 4,
-          fill: "#000",
+          fill: "currentColor",
           fillRule: "nonzero",
           opacity: 1,
         }}
@@ -201,7 +201,7 @@ export const CircularText = ({ className = "", ...rest }: IIconProps) => (
           strokeDashoffset: 0,
           strokeLinejoin: "miter",
           strokeMiterlimit: 4,
-          fill: "#000",
+          fill: "currentColor",
           fillRule: "nonzero",
           opacity: 1,
         }}
@@ -218,7 +218,7 @@ export const CircularText = ({ className = "", ...rest }: IIconProps) => (
           strokeDashoffset: 0,
           strokeLinejoin: "miter",
           strokeMiterlimit: 4,
-          fill: "#000",
+          fill: "currentColor",
           fillRule: "nonzero",
           opacity: 1,
         }}
@@ -235,7 +235,7 @@ export const CircularText = ({ className = "", ...rest }: IIconProps) => (
           strokeDashoffset: 0,
           strokeLinejoin: "miter",
           strokeMiterlimit: 4,
-          fill: "#000",
+          fill: "currentColor",
           fillRule: "nonzero",
           opacity: 1,
         }}
@@ -252,7 +252,7 @@ export const CircularText = ({ className = "", ...rest }: IIconProps) => (
           strokeDashoffset: 0,
           strokeLinejoin: "miter",
           strokeMiterlimit: 4,
-          fill: "#000",
+          fill: "currentColor",
           fillRule: "nonzero",
           opacity: 1,
         }}
@@ -269,7 +269,7 @@ export const CircularText = ({ className = "", ...rest }: IIconProps) => (
           strokeDashoffset: 0,
           strokeLinejoin: "miter",
           strokeMiterlimit: 4,
-          fill: "#000",
+          fill: "currentColor",
           fillRule: "nonzero",
           opacity: 1,
         }}
@@ -286,7 +286,7 @@ export const CircularText = ({ className = "", ...rest }: IIconProps) => (
           strokeDashoffset: 0,
           strokeLinejoin: "miter",
           strokeMiterlimit: 4,
-          fill: "#000",
+          fill: "currentColor",
           fillRule: "nonzero",
           opacity: 1,
         }}
@@ -303,7 +303,7 @@ export const CircularText = ({ className = "", ...rest }: IIconProps) => (
           strokeDashoffset: 0,
           strokeLinejoin: "miter",
           strokeMiterlimit: 4,
-          fill: "#000",
+          fill: "currentColor",
           fillRule: "nonzero",
           opacity: 1,
         }}
@@ -320,7 +320,7 @@ export const CircularText = ({ className = "", ...rest }: IIconProps) => (
           strokeDashoffset: 0,
           strokeLinejoin: "miter",
           strokeMiterlimit: 4,
-          fill: "#000",
+          fill: "currentColor",
           fillRule: "nonzero",
           opacity: 1,
         }}
@@ -337,7 +337,7 @@ export const CircularText = ({ className = "", ...rest }: IIconProps) => (
           strokeDashoffset: 0,
           strokeLinejoin: "miter",
           strokeMiterlimit: 4,
-          fill: "#000",
+          fill: "currentColor",
           fillRule: "nonzero",
           opacity: 1,
         }}
@@ -354,7 +354,7 @@ export const CircularText = ({ className = "", ...rest }: IIconProps) => (
           strokeDashoffset: 0,
           strokeLinejoin: "miter",
           strokeMiterlimit: 4,
-          fill: "#000",
+          fill: "currentColor",
           fillRule: "nonzero",
           opacity: 1,
         }}
@@ -371,7 +371,7 @@ export const CircularText = ({ className = "", ...rest }: IIconProps) => (
           strokeDashoffset: 0,
           strokeLinejoin: "miter",
           strokeMiterlimit: 4,
-          fill: "#000",
+          fill: "currentColor",
           fillRule: "nonzero",
           opacity: 1,
         }}
@@ -388,7 +388,7 @@ export const CircularText = ({ className = "", ...rest }: IIconProps) => (
           strokeDashoffset: 0,
           strokeLinejoin: "miter",
           strokeMiterlimit: 4,
-          fill: "#000",
+          fill: "currentColor",
           fillRule: "nonzero",
           opacity: 1,
         }}
@@ -405,7 +405,7 @@ export const CircularText = ({ className = "", ...rest }: IIconProps) => (
           strokeDashoffset: 0,
           strokeLinejoin: "miter",
           strokeMiterlimit: 4,
-          fill: "#000",
+          fill: "currentColor",
           fillRule: "nonzero",
           opacity: 1,
         }}
@@ -422,7 +422,7 @@ export const CircularText = ({ className = "", ...rest }: IIconProps) => (
           strokeDashoffset: 0,
           strokeLinejoin: "miter",
           strokeMiterlimit: 4,
-          fill: "#000",
+          fill: "currentColor",
           fillRule: "nonzero",
           opacity: 1,
         }}
@@ -439,7 +439,7 @@ export const CircularText = ({ className = "", ...rest }: IIconProps) => (
           strokeDashoffset: 0,
           strokeLinejoin: "miter",
           strokeMiterlimit: 4,
-          fill: "#000",
+          fill: "currentColor",
           fillRule: "nonzero",
           opacity: 1,
         }}
@@ -456,7 +456,7 @@ export const CircularText = ({ className = "", ...rest }: IIconProps) => (
           strokeDashoffset: 0,
           strokeLinejoin: "miter",
           strokeMiterlimit: 4,
-          fill: "#000",
+          fill: "currentColor",
           fillRule: "nonzero",
           opacity: 1,
         }}
