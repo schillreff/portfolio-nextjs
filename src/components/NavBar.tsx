@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { GithubIcon, LinkedinIcon, XIcon } from "./Icons";
+import { GithubIcon, LinkedinIcon, MoonIcon, SunIcon, XIcon } from "./Icons";
 import Logo from "./Logo";
+import UseThemeSwitcher from "./hooks/UseThemeSwitcher";
 
 interface ICustomLinkProps {
   href: string;
@@ -28,6 +29,8 @@ const CustomLink = ({ href, title, className = "" }: ICustomLinkProps) => {
 };
 
 const NavBar = () => {
+  const [mode, setMode] = UseThemeSwitcher();
+
   return (
     <header className=" container mx-auto h-16 font-medium flex items-center justify-between px-4 sm:px-6 lg:px-8">
       <nav>
@@ -69,6 +72,18 @@ const NavBar = () => {
         >
           <XIcon className="w-8 h-auto" />
         </motion.a>
+
+        <button
+          onClick={() => setMode(mode === "dark" ? "light" : "dark")}
+          className="ml-3 flex items-center justify-center rounded-full"
+          type="button"
+        >
+          {mode === "dark" ? (
+            <MoonIcon className="fill-dark w-8 h-auto" />
+          ) : (
+            <SunIcon className="fill-dark w-8 h-auto" />
+          )}
+        </button>
       </nav>
       <div className="absolute left-[50%] top-2 translate-x-[-50%]">
         <Logo />

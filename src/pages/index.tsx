@@ -20,7 +20,8 @@ export default function Home() {
               <Image
                 src={Banner}
                 alt="banner"
-                priority
+                placeholder="blur"
+                blurDataURL="./../../public/images/banner.svg"
                 className="w-full h-auto"
               />
             </div>
