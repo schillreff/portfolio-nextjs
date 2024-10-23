@@ -13,7 +13,7 @@ export default function Home() {
       <Head>
         <title>Schillreff | Home Page</title>
       </Head>
-      <main className="container mx-auto flex items-center text-dark min-h-screen px-4 sm:px-6 lg:px-8">
+      <main className="container mx-auto flex items-center text-dark dark:text-light min-h-screen px-4 sm:px-6 lg:px-8">
         <Layout>
           <div className="flex items-center justify-between w-full">
             <div className="w-1/2">
@@ -39,16 +39,16 @@ export default function Home() {
                 <Link
                   href="./resume/resume.pdf"
                   target="_blank"
-                  className="flex items-center bg-dark text-light p-2.5 px-6 
-                rounded-lg text-lg font-semibold hover:bg-light hover:text-dark 
-                border-2 border-solid border-transparent hover:border-dark"
+                  className="flex items-center bg-dark dark:bg-light text-light dark:text-dark p-2.5 px-6 
+                rounded-lg text-lg font-semibold hover:bg-light dark:hover:bg-dark hover:text-dark dark:hover:text-light 
+                border-2 border-solid border-transparent hover:border-dark dark:hover:border-light"
                 >
                   Resume <LinkArrowIcon className="w-6 ml-1" />
                 </Link>
                 <Link
                   href="mailto:leandroschillreff@gmail.com"
                   target="_blank"
-                  className="ml-4 text-lg font-medium capitalize text-dark underline"
+                  className="ml-4 text-lg font-medium capitalize text-dark dark:text-light underline"
                 >
                   Contact
                 </Link>

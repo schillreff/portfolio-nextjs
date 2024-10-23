@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import { GithubIcon, LinkedinIcon, MoonIcon, SunIcon, XIcon } from "./Icons";
 import Logo from "./Logo";
 import UseThemeSwitcher from "./hooks/UseThemeSwitcher";
+import { useEffect } from "react";
 
 interface ICustomLinkProps {
   href: string;
@@ -17,7 +18,7 @@ const CustomLink = ({ href, title, className = "" }: ICustomLinkProps) => {
     <Link href={href} className={`${className} relative group`}>
       {title}
       <span
-        className={`h-[1px] inline-block bg-dark absolute left-0 -bottom-0.5 
+        className={`h-[1px] inline-block bg-dark dark:bg-light absolute left-0 -bottom-0.5 
       group-hover:w-full transition-[width] duration-300 ${
         router.asPath === href ? "w-full" : "w-0"
       }`}
@@ -29,10 +30,13 @@ const CustomLink = ({ href, title, className = "" }: ICustomLinkProps) => {
 };
 
 const NavBar = () => {
-  const [mode, setMode] = UseThemeSwitcher();
+  const [activeTheme, setActiveTheme] = UseThemeSwitcher();
 
   return (
-    <header className=" container mx-auto h-16 font-medium flex items-center justify-between px-4 sm:px-6 lg:px-8">
+    <header
+      className=" container mx-auto h-16 font-medium flex items-center 
+    justify-between px-4 sm:px-6 lg:px-8 dark:text-light"
+    >
       <nav>
         <CustomLink href="/" title="Home" className="mr-4" />
         <CustomLink href="/about" title="About" className="mx-4" />
@@ -49,7 +53,7 @@ const NavBar = () => {
           whileTap={{ scale: 0.9 }}
           className="mr-3"
         >
-          <GithubIcon className="w-8 h-auto" />
+          <GithubIcon className="" />
         </motion.a>
         <motion.a
           href="https://www.linkedin.com/in/leandroschillreff"
@@ -60,7 +64,7 @@ const NavBar = () => {
           whileTap={{ scale: 0.9 }}
           className="mr-3"
         >
-          <LinkedinIcon className="w-8 h-auto" />
+          <LinkedinIcon className="" />
         </motion.a>
         <motion.a
           href="https://x.com"
@@ -70,18 +74,25 @@ const NavBar = () => {
           }}
           whileTap={{ scale: 0.9 }}
         >
-          <XIcon className="w-8 h-auto" />
+          <XIcon className="" />
         </motion.a>
 
         <button
-          onClick={() => setMode(mode === "dark" ? "light" : "dark")}
-          className="ml-3 flex items-center justify-center rounded-full"
+          onClick={() =>
+            setActiveTheme(activeTheme === "dark" ? "light" : "dark")
+          }
+          className={`ml-3 flex items-center justify-center rounded-full p-1 w-[28px] h-[28px] 
+            ${
+              activeTheme === "light"
+                ? "bg-dark text-light"
+                : "bg-light text-dark"
+            }`}
           type="button"
         >
-          {mode === "dark" ? (
-            <MoonIcon className="fill-dark w-8 h-auto" />
+          {activeTheme === "dark" ? (
+            <MoonIcon className="fill-dark" />
           ) : (
-            <SunIcon className="fill-dark w-8 h-auto" />
+            <SunIcon className="fill-dark" />
           )}
         </button>
       </nav>
