@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 
 const UseThemeSwitcher = () => {
-  const preferDarkQuery = "(prefer-color-scheme: dark)";
-  const [mode, setMode] = useState("");
+  const [activeTheme, setActiveTheme] = useState<string>("");
+  const preferDarkQuery = "(prefers-color-scheme: dark)";
 
   useEffect(() => {
     const mediaQuery = window.matchMedia(preferDarkQuery);
@@ -11,17 +11,15 @@ const UseThemeSwitcher = () => {
     const handleChange = () => {
       if (userPreference) {
         let check = userPreference === "dark" ? "dark" : "light";
-        console.log("handle");
-        console.log(check);
-        setMode(check);
-        if (check === "dark") {
+        setActiveTheme(check);
+        if (check === "dark") { 
           document.documentElement.classList.add("dark");
         } else {
           document.documentElement.classList.remove("dark");
         }
       } else {
         let check = mediaQuery.matches ? "dark" : "light";
-        setMode(check);
+        setActiveTheme(check);
         if (check === "dark") {
           document.documentElement.classList.add("dark");
         } else {
@@ -35,16 +33,16 @@ const UseThemeSwitcher = () => {
   }, []);
 
   useEffect(() => {
-    if (mode === "dark") {
+    if (activeTheme === "dark") {
       window.localStorage.setItem("theme", "dark");
       document.documentElement.classList.add("dark");
     } else {
       window.localStorage.setItem("theme", "light");
       document.documentElement.classList.remove("dark");
     }
-  }, [mode]);
+  }, [activeTheme]);
 
-  return [mode, setMode] as const;
+  return [activeTheme, setActiveTheme] as const;
 };
 
 export default UseThemeSwitcher;

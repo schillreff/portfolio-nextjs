@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import { GithubIcon, LinkedinIcon, MoonIcon, SunIcon, XIcon } from "./Icons";
 import Logo from "./Logo";
 import UseThemeSwitcher from "./hooks/UseThemeSwitcher";
+import { useEffect } from "react";
 
 interface ICustomLinkProps {
   href: string;
@@ -29,7 +30,7 @@ const CustomLink = ({ href, title, className = "" }: ICustomLinkProps) => {
 };
 
 const NavBar = () => {
-  const [mode, setMode] = UseThemeSwitcher();
+  const [activeTheme, setActiveTheme] = UseThemeSwitcher();
 
   return (
     <header
@@ -77,13 +78,19 @@ const NavBar = () => {
         </motion.a>
 
         <button
-          onClick={() => setMode(mode === "dark" ? "light" : "dark")}
+          onClick={() =>
+            setActiveTheme(activeTheme === "dark" ? "light" : "dark")
+          }
           className={`ml-3 flex items-center justify-center rounded-full p-1 w-[28px] h-[28px] 
-            ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}`}
+            ${
+              activeTheme === "light"
+                ? "bg-dark text-light"
+                : "bg-light text-dark"
+            }`}
           type="button"
         >
-          {mode === "dark" ? (
-            <MoonIcon className="fill-dark h-auto" />
+          {activeTheme === "dark" ? (
+            <MoonIcon className="fill-dark" />
           ) : (
             <SunIcon className="fill-dark" />
           )}
