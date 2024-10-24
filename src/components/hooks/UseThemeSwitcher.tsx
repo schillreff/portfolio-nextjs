@@ -12,7 +12,7 @@ const UseThemeSwitcher = () => {
       if (userPreference) {
         let check = userPreference === "dark" ? "dark" : "light";
         setActiveTheme(check);
-        if (check === "dark") { 
+        if (check === "dark") {
           document.documentElement.classList.add("dark");
         } else {
           document.documentElement.classList.remove("dark");
@@ -27,6 +27,8 @@ const UseThemeSwitcher = () => {
         }
       }
     };
+
+    handleChange();
 
     mediaQuery.addEventListener("change", handleChange);
     return () => mediaQuery.removeEventListener("change", handleChange);
