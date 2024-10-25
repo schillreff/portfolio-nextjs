@@ -26,11 +26,11 @@ const FeaturedProject = ({
   return (
     <article
       className="w-full flex items-center justify-between relative rounded-br-2xl
-       rounded-3xl border border-solid border-dark bg-light shadow-2xl p-8"
+       rounded-3xl border border-solid border-dark bg-light dark:border-light dark:bg-dark shadow-2xl p-8"
     >
       <div
         className="absolute top-0 -right-3 -z-10 w-[calc(100%+12px)] 
-      h-[calc(100%+14px)] rounded-br-3xl rounded-[2.5rem] bg-dark"
+      h-[calc(100%+14px)] rounded-br-3xl rounded-[2.5rem] bg-dark dark:bg-light"
       />
       <Link
         href={link}
@@ -44,23 +44,29 @@ const FeaturedProject = ({
         />
       </Link>
       <div className="w-1/2 flex flex-col items-start justify-between pl-6 gap-1">
-        <span className="text-primary font-medium text-xl">{type}</span>
+        <span className="text-primary dark:text-primaryDark font-medium text-xl">
+          {type}
+        </span>
         <Link
           href={link}
           target="_blank"
           className="hover:underline underline-offset-2"
         >
-          <h2 className="my-2  w-full text-left text-4xl font-bold">{title}</h2>
+          <h2 className="my-2  w-full text-left text-4xl font-bold dark:text-light">
+            {title}
+          </h2>
         </Link>
-        <p className="my-2 font-medium text-dark text-justify">{summary}</p>
+        <p className="my-2 font-medium text-dark dark:text-light text-justify">
+          {summary}
+        </p>
         <div className="mt-2 flex items-center">
           <Link href={github} target="_blank">
-            <GithubIcon className="w-[54px] h-[54px]" />
+            <GithubIcon className="w-[54px] h-[54px] dark:text-light" />
           </Link>
           <Link
             href={link}
             target="_blank"
-            className="ml-6 rounded-lg bg-dark text-light py-2 px-6 text-lg 
+            className="ml-6 rounded-lg bg-dark dark:bg-light text-light dark:text-dark py-2 px-6 text-lg 
             font-semibold"
           >
             Visit Project
@@ -83,11 +89,11 @@ const Project = ({ type, title, img, link, github }: IProject) => {
   return (
     <article
       className="w-full flex flex-col items-center justify-center rounded-2xl border 
-    border-solid border-dark bg-light p-6 relative"
+    border-solid border-dark dark:border-light bg-light dark:bg-dark p-6 relative"
     >
       <div
         className="absolute top-0 -right-3 -z-10 w-[calc(100%+12px)] 
-      h-[calc(100%+14px)] rounded-br-3xl rounded-[2rem] bg-dark"
+      h-[calc(100%+14px)] rounded-br-3xl rounded-[2rem] bg-dark dark:bg-light"
       />
       <Link
         href={link}
@@ -101,24 +107,28 @@ const Project = ({ type, title, img, link, github }: IProject) => {
         />
       </Link>
       <div className="w-full flex flex-col items-start justify-between mt-4">
-        <span className="text-primary font-medium text-xl">{type}</span>
+        <span className="text-primary dark:text-primaryDark font-medium text-xl">
+          {type}
+        </span>
         <Link
           href={link}
           target="_blank"
           className="hover:underline underline-offset-2"
         >
-          <h2 className="my-2  w-full text-left text-3xl font-bold">{title}</h2>
+          <h2 className="my-2 w-full text-left text-3xl font-bold dark:text-light">
+            {title}
+          </h2>
         </Link>
         <div className="w-full mt-2 flex items-center justify-between">
           <Link
             href={link}
             target="_blank"
-            className="text-lg font-semibold underline"
+            className="text-lg font-semibold underline dark:text-light"
           >
             Visit
           </Link>
           <Link href={github} target="_blank">
-            <GithubIcon className="w-[40px] h-[40px]" />
+            <GithubIcon className="w-[40px] h-[40px] dark:text-light" />
           </Link>
         </div>
       </div>
