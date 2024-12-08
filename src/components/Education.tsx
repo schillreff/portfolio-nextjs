@@ -58,15 +58,15 @@ const Education = () => {
             the job market. Between languages and technologies learned include 
             HTML, CSS, JavaScript, TypeScript, React, Node.js, Python and SQL."
           />
-          {/* <Details
+          <Details
             type="Full Stack Web Development Course"
             time="2021-2022"
             place="Kenzie Academy"
             info="Full Stack Development course that covers Front End 
             and Back End technologies in addition to soft skills necessary for 
-            the job market. Between languages and technologies learned include 
+            the job  market. Between languages and technologies learned include 
             HTML, CSS, JavaScript, TypeScript, React,     Node.js, Python and SQL."
-          /> */}
+          />
         </ul>  
       </div>
     </div>
