@@ -1,5 +1,5 @@
-import Link from "next/link";
-import Layout from "./Layout";
+import Link from 'next/link';
+import Layout from './Layout';
 
 const Footer = () => {
   return (
@@ -11,7 +11,7 @@ const Footer = () => {
         <Layout className="py-8 flex items-center justify-between">
           <span>{new Date().getFullYear()} &copy; All Rights Reserved</span>
           <div className="flex items-center">
-            Built With{" "}
+            Built With{' '}
             <span className="text-primary dark:text-primaryDark text-2xl px-1">
               &#9825;
             </span>

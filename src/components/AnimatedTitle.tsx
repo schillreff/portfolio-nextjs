@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 
 interface IAnimatedTitleProps {
   text: string;
@@ -32,7 +32,7 @@ const variantsSingleWord = {
   },
 };
 
-const AnimatedTitle = ({ text, className = "" }: IAnimatedTitleProps) => {
+const AnimatedTitle = ({ text, className = '' }: IAnimatedTitleProps) => {
   return (
     <div
       className="w-full mx-auto py-2 flex items-center justify-center 
@@ -44,9 +44,9 @@ const AnimatedTitle = ({ text, className = "" }: IAnimatedTitleProps) => {
         initial="initial"
         animate="animate"
       >
-        {text.split(" ").map((word, index) => (
+        {text.split(' ').map((word, index) => (
           <motion.span
-            key={word + "-" + index}
+            key={word + '-' + index}
             className="inline-block"
             variants={variantsSingleWord}
           >

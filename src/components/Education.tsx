@@ -1,6 +1,6 @@
-import { motion, useScroll } from "framer-motion";
-import { useRef } from "react";
-import LiIcon from "./LiIcon";
+import { motion, useScroll } from 'framer-motion';
+import { useRef } from 'react';
+import LiIcon from './LiIcon';
 
 interface IDetaisl {
   type: string;
@@ -21,7 +21,7 @@ const Details = ({ type, time, place, info }: IDetaisl) => {
       <motion.div
         initial={{ y: 50 }}
         whileInView={{ y: 0 }}
-        transition={{ duration: 0.5, type: "spring" }}
+        transition={{ duration: 0.5, type: 'spring' }}
       >
         <h3 className="capitalize font-bold text-2xl">{type}</h3>
         <span className="capitalize font-medium text-dark/75 dark:text-light/75">
@@ -37,7 +37,7 @@ const Education = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start end", "center start"],
+    offset: ['start end', 'center start'],
   });
 
   return (

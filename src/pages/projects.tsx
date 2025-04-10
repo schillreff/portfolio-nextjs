@@ -1,10 +1,10 @@
-import AnimatedTitle from "@/components/AnimatedTitle";
-import { GithubIcon } from "@/components/Icons";
-import Layout from "@/components/Layout";
-import Head from "next/head";
-import Image, { StaticImageData } from "next/image";
-import Link from "next/link";
-import VehicleCommerceImage from "./../../public/images/projects/vehicles-commerce.png";
+import AnimatedTitle from '@/components/AnimatedTitle';
+import { GithubIcon } from '@/components/Icons';
+import Layout from '@/components/Layout';
+import Head from 'next/head';
+import Image, { StaticImageData } from 'next/image';
+import Link from 'next/link';
+import VehicleCommerceImage from './../../public/images/projects/vehicles-commerce.png';
 
 interface IFeaturedProject {
   type: string;
@@ -47,11 +47,7 @@ const FeaturedProject = ({
         <span className="text-primary dark:text-primaryDark font-medium text-xl">
           {type}
         </span>
-        <Link
-          href={link}
-          target="_blank"
-          className="hover:underline underline-offset-2"
-        >
+        <Link href={link} target="_blank" className="hover:underline underline-offset-2">
           <h2 className="my-2  w-full text-left text-4xl font-bold dark:text-light">
             {title}
           </h2>
@@ -110,11 +106,7 @@ const Project = ({ type, title, img, link, github }: IProject) => {
         <span className="text-primary dark:text-primaryDark font-medium text-xl">
           {type}
         </span>
-        <Link
-          href={link}
-          target="_blank"
-          className="hover:underline underline-offset-2"
-        >
+        <Link href={link} target="_blank" className="hover:underline underline-offset-2">
           <h2 className="my-2 w-full text-left text-3xl font-bold dark:text-light">
             {title}
           </h2>
@@ -147,10 +139,7 @@ export default function Projects() {
       flex-col items-center justify-center"
       >
         <Layout className="pt-16">
-          <AnimatedTitle
-            text="Imagination Trumps Knowledge!"
-            className="mb-16"
-          />
+          <AnimatedTitle text="Imagination Trumps Knowledge!" className="mb-16" />
           <div className="grid grid-cols-12 gap-24 gap-y-32">
             <div className="col-span-12">
               <FeaturedProject

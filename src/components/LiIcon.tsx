@@ -1,5 +1,5 @@
-import { motion, useScroll } from "framer-motion";
-import { RefObject } from "react";
+import { motion, useScroll } from 'framer-motion';
+import { RefObject } from 'react';
 
 interface ILiIcon {
   reference: RefObject<HTMLLIElement>;
@@ -8,7 +8,7 @@ interface ILiIcon {
 const LiIcon = ({ reference }: ILiIcon) => {
   const { scrollYProgress } = useScroll({
     target: reference,
-    offset: ["center end", "center center"],
+    offset: ['center end', 'center center'],
     layoutEffect: false,
   });
 

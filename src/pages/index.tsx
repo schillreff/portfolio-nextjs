@@ -1,11 +1,11 @@
-import AnimatedText from "@/components/AnimatedTitle";
-import HireMe from "@/components/HireMe";
-import { LinkArrowIcon } from "@/components/Icons";
-import Layout from "@/components/Layout";
-import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
-import Banner from "./../../public/images/banner.svg";
+import AnimatedText from '@/components/AnimatedTitle';
+import HireMe from '@/components/HireMe';
+import { LinkArrowIcon } from '@/components/Icons';
+import Layout from '@/components/Layout';
+import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
+import Banner from './../../public/images/banner.svg';
 
 export default function Home() {
   return (
@@ -23,6 +23,8 @@ export default function Home() {
                 placeholder="blur"
                 blurDataURL="./../../public/images/banner.svg"
                 className="w-full h-auto"
+                priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
             <div className="w-1/2 flex flex-col items-center self-center">
@@ -31,9 +33,9 @@ export default function Home() {
                 className="!text-6xl !text-left"
               />
               <p className="my-4 text-base font-medium text-justify">
-                As a skilled full-stack developer, I am dedicated to turning
-                ideas into innovative web applications. Explore my latest
-                projects, showcasing my expertise in full-stack development.
+                As a skilled full-stack developer, I am dedicated to turning ideas into
+                innovative web applications. Explore my latest projects, showcasing my
+                expertise in full-stack development.
               </p>
               <div className="flex items-center self-start mt-2">
                 <Link

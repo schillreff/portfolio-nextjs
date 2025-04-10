@@ -1,10 +1,9 @@
-import { motion } from "framer-motion";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import { GithubIcon, LinkedinIcon, MoonIcon, SunIcon, XIcon } from "./Icons";
-import Logo from "./Logo";
-import UseThemeSwitcher from "./hooks/UseThemeSwitcher";
-import { useEffect } from "react";
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { GithubIcon, LinkedinIcon, MoonIcon, SunIcon, XIcon } from './Icons';
+import Logo from './Logo';
+import UseThemeSwitcher from './hooks/UseThemeSwitcher';
 
 interface ICustomLinkProps {
   href: string;
@@ -12,7 +11,7 @@ interface ICustomLinkProps {
   className: string;
 }
 
-const CustomLink = ({ href, title, className = "" }: ICustomLinkProps) => {
+const CustomLink = ({ href, title, className = '' }: ICustomLinkProps) => {
   const router = useRouter();
   return (
     <Link href={href} className={`${className} relative group`}>
@@ -20,7 +19,7 @@ const CustomLink = ({ href, title, className = "" }: ICustomLinkProps) => {
       <span
         className={`h-[1px] inline-block bg-dark dark:bg-light absolute left-0 -bottom-0.5 
       group-hover:w-full transition-[width] duration-300 ${
-        router.asPath === href ? "w-full" : "w-0"
+        router.asPath === href ? 'w-full' : 'w-0'
       }`}
       >
         &nbsp;
@@ -78,18 +77,12 @@ const NavBar = () => {
         </motion.a>
 
         <button
-          onClick={() =>
-            setActiveTheme(activeTheme === "dark" ? "light" : "dark")
-          }
+          onClick={() => setActiveTheme(activeTheme === 'dark' ? 'light' : 'dark')}
           className={`ml-3 flex items-center justify-center rounded-full p-1 w-[28px] h-[28px] 
-            ${
-              activeTheme === "light"
-                ? "bg-dark text-light"
-                : "bg-light text-dark"
-            }`}
+            ${activeTheme === 'light' ? 'bg-dark text-light' : 'bg-light text-dark'}`}
           type="button"
         >
-          {activeTheme === "dark" ? (
+          {activeTheme === 'dark' ? (
             <MoonIcon className="fill-dark" />
           ) : (
             <SunIcon className="fill-dark" />
