@@ -1,5 +1,5 @@
 import AnimatedText from '@/components/AnimatedTitle';
-import HireMe from '@/components/HireMe';
+// import HireMe from '@/components/HireMe';
 import { LinkArrowIcon } from '@/components/Icons';
 import Layout from '@/components/Layout';
 import Head from 'next/head';
@@ -13,7 +13,8 @@ export default function Home() {
       <Head>
         <title>Schillreff | Home Page</title>
       </Head>
-      <main className="container mx-auto flex items-center text-dark dark:text-light min-h-screen px-4 sm:px-6 lg:px-8">
+      {/* <main className="container mx-auto flex items-center text-dark dark:text-light min-h-screen px-4 sm:px-6 lg:px-8"> */}
+      <main className="flex items-center w-full min-h-screen text-dark dark:text-light">
         <Layout>
           <div className="flex items-center justify-between w-full">
             <div className="w-1/2">
@@ -58,7 +59,7 @@ export default function Home() {
             </div>
           </div>
         </Layout>
-        <HireMe />
+        {/* <HireMe /> */}
       </main>
     </>
   );
